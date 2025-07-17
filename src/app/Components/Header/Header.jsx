@@ -53,7 +53,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 md:p-0 text-white bg-[#f03612] rounded-sm md:bg-transparent md:text-[#f03612]"
+                class="font-bold block py-2 px-3 md:p-0 text-white bg-[#f03612] rounded-sm md:bg-transparent md:text-[#f03612]"
                 aria-current="page"
               >
                 Início
@@ -62,15 +62,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="font-bold block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Serviços
               </a>
@@ -78,9 +70,17 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="font-bold block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-bold block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Contato
               </a>
             </li>
           </ul>
