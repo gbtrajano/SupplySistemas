@@ -13,11 +13,10 @@ const Maintenance = () => {
           />
         </svg>
         <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 lg:mb-6 md:text-5xl xl:text-6xl dark:text-white">
-          Em Manutenção...
+          Manutenção...
         </h1>
         <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          Nossos administradores estão realizando uma manutenção em nosso
-          Website.
+          Nossos desenvolvedores estão realizando uma manutenção no Website.
         </p>
       </div>
     </section>

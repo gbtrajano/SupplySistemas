@@ -7,11 +7,11 @@ import Trial from "./Components/Trial/Trial";
 const page = () => {
   return (
     <div>
-      <Hero />
-      {/* <Maintenance /> */}
+      <Maintenance />
+      {/*<Hero />
       <Info />
-      <Companies />
-      <Trial />
+      <Companies
+      <Trial />*/}
     </div>
   );
 };
