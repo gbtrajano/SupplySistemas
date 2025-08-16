@@ -28,8 +28,8 @@ const Team = () => {
                 CEO & Desenvolvedor
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Bonnie drives the technical strategy of the flowbite platform
-                and brand.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
+                enim!
               </p>
               <ul className="flex space-x-4 sm:mt-0">
                 <li>
@@ -89,8 +89,8 @@ const Team = () => {
                 CTO e Desenvolvedor
               </span>
               <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                Jese drives the technical strategy of the flowbite platform and
-                brand.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellendus, ipsa?
               </p>
               <ul className="flex space-x-4 sm:mt-0">
                 <li>
