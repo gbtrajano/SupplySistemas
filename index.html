@@ -25,6 +25,11 @@
             scroll-behavior: smooth;
         }
 
+        :root {
+            --cor-principal: #f03612;
+            --cor-secundaria: #fa401b;
+        }
+
         body {
             font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
         }
@@ -48,7 +53,7 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <a href="#home" class="flex items-center gap-2">
-                    <span class="inline-block h-8 w-8 rounded-full ring-2 ring-orange-500">
+                    <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--cor-principal)]">
                         <img src="SRC/Supply.png" alt="" class="rounded-full"">
                     </span>
                     <span class=" text-lg font-semibold tracking-tight text-gray-900">Supply Sistemas</span>
@@ -56,13 +61,13 @@
 
                 <!-- Desktop nav -->
                 <nav class="hidden md:flex items-center gap-8 text-sm">
-                    <a href="#home" class="hover:text-orange-600">Home</a>
-                    <a href="#sobre" class="hover:text-orange-600">Sobre Nós</a>
-                    <a href="#quem-somos" class="hover:text-orange-600">Quem Somos</a>
-                    <a href="#projetos" class="hover:text-orange-600">Projetos</a>
-                    <a href="#contatos" class="hover:text-orange-600">Contatos</a>
+                    <a href="#home" class="hover:text-[var(--cor-principal)]">Home</a>
+                    <a href="#sobre" class="hover:text-[var(--cor-principal)]">Sobre Nós</a>
+                    <a href="#quem-somos" class="hover:text-[var(--cor-principal)]">Quem Somos</a>
+                    <a href="#projetos" class="hover:text-[var(--cor-principal)]">Projetos</a>
+                    <a href="#contatos" class="hover:text-[var(--cor-principal)]">Contatos</a>
                     <a href="#contatos"
-                        class="inline-flex items-center rounded-full border border-orange-500 px-4 py-1.5 font-medium text-orange-600 hover:bg-orange-50">Solicitar
+                        class="inline-flex items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50 transition duration-300 ">Solicitar
                         proposta</a>
                 </nav>
 
@@ -82,13 +87,13 @@
         <!-- Mobile nav -->
         <div id="mobile-nav" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur">
             <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3">
-                <a href="#home" class="py-1 hover:text-orange-600">Home</a>
-                <a href="#sobre" class="py-1 hover:text-orange-600">Sobre Nós</a>
-                <a href="#quem-somos" class="py-1 hover:text-orange-600">Quem Somos</a>
-                <a href="#projetos" class="py-1 hover:text-orange-600">Projetos</a>
-                <a href="#contatos" class="py-1 hover:text-orange-600">Contatos</a>
+                <a href="#home" class="py-1 hover:text-[var(--cor-principal)]">Home</a>
+                <a href="#sobre" class="py-1 hover:text-[var(--cor-principal)]">Sobre Nós</a>
+                <a href="#quem-somos" class="py-1 hover:text-[var(--cor-principal)]">Quem Somos</a>
+                <a href="#projetos" class="py-1 hover:text-[var(--cor-principal)]">Projetos</a>
+                <a href="#contatos" class="py-1 hover:text-[var(--cor-principal)]">Contatos</a>
                 <a href="#contatos"
-                    class="mt-2 inline-flex w-max items-center rounded-full border border-orange-500 px-4 py-1.5 font-medium text-orange-600 hover:bg-orange-50">Solicitar
+                    class="mt-2 inline-flex w-max items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50">Solicitar
                     proposta</a>
             </nav>
         </div>
@@ -106,7 +111,7 @@
             <div class="grid items-center gap-10 md:grid-cols-2">
                 <div>
                     <span
-                        class="inline-flex items-center gap-2 rounded-full border border-orange-200 px-3 py-1 text-xs font-medium text-orange-700">
+                        class="inline-flex items-center gap-2 rounded-full border border-red-200 px-3 py-1 text-xs font-medium text-[var(--cor-principal)]">
                         • Software sob medida
                     </span>
                     <h1 class="mt-5 font-display text-5xl leading-tight text-gray-900">
@@ -118,7 +123,7 @@
                     </p>
                     <div class="mt-8 flex flex-wrap gap-3">
                         <a href="#contatos"
-                            class="inline-flex items-center justify-center rounded-md bg-orange-500 px-5 py-3 text-white hover:bg-orange-600 transition">
+                            class="inline-flex items-center justify-center rounded-md bg-[var(--cor-principal)] px-5 py-3 text-white hover:bg-[var(--cor-secundaria)] transition duration-300">
                             Começar um projeto
                         </a>
                         <a href="#projetos"
@@ -133,7 +138,7 @@
                     <div class="dot-grid rounded-2xl border border-gray-200 p-6">
                         <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                             <div class="flex items-center justify-between">
-                                <div class="h-3 w-3 rounded-full bg-orange-500"></div>
+                                <div class="h-3 w-3 rounded-full bg-[var(--cor-principal)]"></div>
                                 <div class="text-sm text-gray-500">status: online</div>
                             </div>
                             <div class="mt-6 space-y-3">
@@ -145,7 +150,7 @@
                         </div>
                     </div>
                     <span
-                        class="absolute -right-4 -bottom-4 inline-block rounded-full bg-white px-3 py-1 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Supply
+                        class="absolute -right-4 -bottom-4 inline-block rounded-full bg-white px-3 py-1 text-xs font-medium text-[var(--cor-principal)] ring-1 ring-red-200">Supply
                         Engines v2</span>
                 </div>
             </div>
@@ -157,7 +162,7 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
             <div class="max-w-3xl">
                 <h2 class="font-display text-3xl text-gray-900">Sobre nós</h2>
-                <div class="mt-3 h-1 w-16 bg-orange-500"></div>
+                <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
                 <p class="mt-6 text-gray-600">
                     A Supply Sistemas cria soluções digitais sob medida, combinando engenharia de software, UX e boas
                     práticas de produto.
@@ -165,12 +170,15 @@
                 </p>
                 <ul class="mt-6 space-y-2 text-gray-700">
                     <li class="flex gap-3"><span
-                            class="mt-1 h-2 w-2 rounded-full bg-orange-500"></span><span>Arquitetura escalável e
+                            class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Arquitetura
+                            escalável e
                             segura.</span></li>
-                    <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-orange-500"></span><span>Time
+                    <li class="flex gap-3"><span
+                            class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Time
                             focado em resultado, não apenas em entregas.</span></li>
                     <li class="flex gap-3"><span
-                            class="mt-1 h-2 w-2 rounded-full bg-orange-500"></span><span>Transparência total no processo
+                            class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Transparência total
+                            no processo
                             e nos prazos.</span></li>
                 </ul>
             </div>
@@ -183,7 +191,7 @@
             <div class="flex items-end justify-between gap-6">
                 <div>
                     <h2 class="font-display text-3xl text-gray-900">Nossa Equipe</h2>
-                    <div class="mt-3 h-1 w-16 bg-orange-500"></div>
+                    <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
                     <p class="mt-6 max-w-2xl text-gray-600">
                         Gente que une visão de produto, engenharia e cuidado com a experiência.
                     </p>
@@ -195,8 +203,8 @@
                 <article
                     class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md">
                     <div class="flex items-center gap-4">
-                        <img src="https://i.pravatar.cc/160?img=12" alt="Membro 1"
-                            class="h-16 w-16 rounded-full ring-2 ring-orange-200 object-cover" />
+                        <img src="https://placehold.co/400x400/f03612/FFFFFF?text=Foto" alt="Membro 1"
+                            class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover" />
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">Gabriel Trajano</h3>
                             <p class="text-sm text-gray-600">CEO • Desenvolvimento & Design</p>
@@ -209,8 +217,8 @@
                 <article
                     class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md">
                     <div class="flex items-center gap-4">
-                        <img src="https://i.pravatar.cc/160?img=32" alt="Membro 2"
-                            class="h-16 w-16 rounded-full ring-2 ring-orange-200 object-cover" />
+                        <img src="https://placehold.co/400x400/f03612/FFFFFF?text=Foto" alt="Membro 2"
+                            class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover" />
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900">Rodrigo Ferreira</h3>
                             <p class="text-sm text-gray-600">Diretor Executivo • Desenvolvimento & Dados</p>
@@ -229,7 +237,7 @@
             <div class="flex items-end justify-between">
                 <div>
                     <h2 class="font-display text-3xl text-gray-900">Nossos Projetos</h2>
-                    <div class="mt-3 h-1 w-16 bg-orange-500"></div>
+                    <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
                 </div>
                 <a href="#contatos"
                     class="hidden sm:inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50">
@@ -241,7 +249,7 @@
                 <!-- Card Projeto -->
                 <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
                     <div class="relative">
-                        <img src="https://picsum.photos/seed/app1/600/400" alt="Projeto 1"
+                        <img src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto" alt="Projeto 1"
                             class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
                         <span
                             class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Web</span>
@@ -254,7 +262,7 @@
 
                 <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
                     <div class="relative">
-                        <img src="https://picsum.photos/seed/app2/600/400" alt="Projeto 2"
+                        <img src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto" alt="Projeto 2"
                             class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
                         <span
                             class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Mobile</span>
@@ -267,7 +275,7 @@
 
                 <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
                     <div class="relative">
-                        <img src="https://picsum.photos/seed/app3/600/400" alt="Projeto 3"
+                        <img src="https://placehold.co/600x400/f03612git/FFFFFF?text=Projeto" alt="Projeto 3"
                             class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
                         <span
                             class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Data</span>
@@ -287,7 +295,7 @@
             <div class="grid gap-10 md:grid-cols-2">
                 <div>
                     <h2 class="font-display text-3xl text-gray-900">Entre em contato</h2>
-                    <div class="mt-3 h-1 w-16 bg-orange-500"></div>
+                    <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
                     <p class="mt-6 text-gray-600">Conte um pouco do seu desafio. Respondemos em até 1 dia útil.</p>
 
                     <div class="mt-6 space-y-3 text-gray-700">
@@ -301,23 +309,23 @@
                     <div>
                         <label class="mb-1 block text-sm font-medium text-gray-700">Nome</label>
                         <input type="text"
-                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-orange-500 focus:outline-none p-2"
+                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
                             placeholder="Seu nome" required>
                     </div>
                     <div>
                         <label class="mb-1 block text-sm font-medium text-gray-700">E-mail</label>
                         <input type="email"
-                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-orange-500 focus:outline-none p-2"
+                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
                             placeholder="voce@exemplo.com" required>
                     </div>
                     <div>
                         <label class="mb-1 block text-sm font-medium text-gray-700">Mensagem</label>
                         <textarea rows="5"
-                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-orange-500 focus:outline-none p-2"
+                            class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
                             placeholder="Como podemos ajudar?" required></textarea>
                     </div>
                     <button type="submit"
-                        class="w-full rounded-md bg-orange-500 py-3 font-medium text-white hover:bg-orange-600 transition">Enviar</button>
+                        class="w-full rounded-md bg-[var(--cor-principal)] py-3 font-medium text-white hover:bg-orange-600 transition">Enviar</button>
                     <p class="text-xs text-gray-500">Ao enviar, você concorda com nossa política de privacidade.</p>
                 </form>
             </div>
@@ -330,7 +338,7 @@
             <div class="grid gap-8 md:grid-cols-3">
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="inline-block h-7 w-7 rounded-full ring-2 ring-orange-500">
+                        <span class="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--cor-principal)]">
                             <img src="SRC/Supply.png" alt="Logo Supply" class="rounded-full">
                         </span>
                         <span class="text-base font-semibold text-gray-900">Supply Sistemas</span>
@@ -343,11 +351,11 @@
                 <div>
                     <h4 class="text-sm font-semibold text-gray-900">Navegação</h4>
                     <ul class="mt-4 space-y-2 text-sm">
-                        <li><a class="hover:text-orange-600" href="#home">Home</a></li>
-                        <li><a class="hover:text-orange-600" href="#sobre">Sobre Nós</a></li>
-                        <li><a class="hover:text-orange-600" href="#quem-somos">Quem Somos</a></li>
-                        <li><a class="hover:text-orange-600" href="#projetos">Projetos</a></li>
-                        <li><a class="hover:text-orange-600" href="#contatos">Contatos</a></li>
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#home">Home</a></li>
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#sobre">Sobre Nós</a></li>
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#quem-somos">Quem Somos</a></li>
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#projetos">Projetos</a></li>
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#contatos">Contatos</a></li>
                     </ul>
                 </div>
 
@@ -355,9 +363,10 @@
                     <h4 class="text-sm font-semibold text-gray-900">Legal</h4>
                     <ul class="mt-4 space-y-2 text-sm">
                         <!-- Link externo para termos (não aparece no corpo da página) -->
-                        <li><a class="hover:text-orange-600" href="termos.html" target="_blank" rel="noopener">Termos e
+                        <li><a class="hover:text-[var(--cor-principal)]" href="termos.html" target="_blank"
+                                rel="noopener">Termos e
                                 Condições</a></li>
-                        <li><a class="hover:text-orange-600" href="#"
+                        <li><a class="hover:text-[var(--cor-principal)]" href="#"
                                 onclick="alert('Em breve'); return false;">Política de Privacidade</a></li>
                     </ul>
                 </div>
@@ -367,8 +376,8 @@
                 class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-6 text-sm text-gray-500 md:flex-row">
                 <p>© 2025 Supply Sistemas. Todos os direitos reservados.</p>
                 <div class="flex items-center gap-4">
-                    <a href="#" class="hover:text-orange-600">Facebook</a>
-                    <a href="#" class="hover:text-orange-600">Instagram</a>
+                    <a href="#" class="hover:text-[var(--cor-principal)]">Facebook</a>
+                    <a href="#" class="hover:text-[var(--cor-principal)]">Instagram</a>
                 </div>
             </div>
         </div>
