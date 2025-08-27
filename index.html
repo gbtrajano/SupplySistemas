@@ -9,10 +9,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="SRC/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="SRC/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="SRC/favicon-16x16.png" />
-  <link rel="manifest" href="SRC/favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="script.js" defer></script>
 
   <!-- Tipografia -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +27,8 @@
 </head>
 
 <body class="bg-white text-gray-800">
-  <img src="SRC/whatsapp-svgrepo-com.svg" alt="whatsapp_icon" class="whatsapp-icon">
+
+  <img src="SRC/whatsapp-svgrepo-com.svg" alt="whatsapp_icon" id="whatsapp-icon">
   <!-- HEADER -->
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -310,10 +313,6 @@
             <p>
               <span class="font-medium text-gray-900">E-mail:</span>
               contatosupplysistemas@gmail.com
-            </p>
-            <p>
-              <span class="font-medium text-gray-900">Telefone:</span> (21)
-              98244-6702
             </p>
             <p>
               <span class="font-medium text-gray-900">Endereço:</span> Rio de

@@ -30,7 +30,7 @@
      background-size: 22px 22px;
  }
 
- .whatsapp-icon {
+ #whatsapp-icon {
      position: absolute;
      bottom: 25px;
      right: 25px;
@@ -40,7 +40,7 @@
      z-index: 10;
  }
 
- .whatsapp-icon:hover {
+ #whatsapp-icon:hover {
      transform: scale(1.10);
      opacity: 0.9;
      cursor: pointer;
