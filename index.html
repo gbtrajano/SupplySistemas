@@ -1,630 +1,448 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Supply Sistemas — Software sob medida</title>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="SRC/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="SRC/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="SRC/favicon-16x16.png"
-    />
-    <link rel="manifest" href="SRC/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supply Sistemas — Software sob medida</title>
 
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="SRC/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="SRC/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="SRC/favicon-16x16.png" />
+  <link rel="manifest" href="SRC/favicon.ico" />
 
-    <!-- Tipografia -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
 
-      :root {
-        --cor-principal: #f03612;
-        --cor-secundaria: #fa401b;
-      }
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      body {
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
-          sans-serif;
-      }
-
-      .font-display {
-        font-family: "Playfair Display", Georgia, serif;
-      }
-
-      /* Decorativos sutis */
-      .dot-grid {
-        background-image: radial-gradient(
-          circle at 1px 1px,
-          rgba(249, 115, 22, 0.12) 1px,
-          transparent 0
-        );
-        background-size: 22px 22px;
-      }
-    </style>
-  </head>
-
-  <body class="bg-white text-gray-800">
-    <!-- HEADER -->
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="#home" class="flex items-center gap-2">
-            <span
-              class="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--cor-principal)]"
-            >
-              <img src="SRC/Supply.png" alt="" class="rounded-full"">
+<body class="bg-white text-gray-800">
+  <img src="SRC/whatsapp-svgrepo-com.svg" alt="whatsapp_icon" class="whatsapp-icon">
+  <!-- HEADER -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="flex items-center gap-2">
+          <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[var(--cor-principal)]">
+            <img src="SRC/Supply.png" alt="" class="rounded-full"">
             </span>
-            <span class="text-lg font-semibold tracking-tight text-gray-900"
-              >Supply Sistemas</span
-            >
-          </a>
+            <span class=" text-lg font-semibold tracking-tight text-gray-900">Supply Sistemas</span>
+        </a>
 
-          <!-- Desktop nav -->
-          <nav class="hidden md:flex items-center gap-8 text-sm">
-            <a href="#home" class="hover:text-[var(--cor-principal)]">Home</a>
-            <a href="#sobre" class="hover:text-[var(--cor-principal)]"
-              >Sobre Nós</a
-            >
-            <a href="#quem-somos" class="hover:text-[var(--cor-principal)]"
-              >Quem Somos</a
-            >
-            <a href="#projetos" class="hover:text-[var(--cor-principal)]"
-              >Projetos</a
-            >
-            <a href="#contatos" class="hover:text-[var(--cor-principal)]"
-              >Contatos</a
-            >
-            <a
-              href="#contatos"
-              class="inline-flex items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50 transition duration-300"
-              >Solicitar proposta</a
-            >
-          </nav>
-
-          <!-- Mobile button -->
-          <button
-            id="menu-btn"
-            class="md:hidden inline-flex items-center justify-center rounded-md border border-gray-200 p-2 hover:bg-gray-50"
-            aria-label="Abrir menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-800"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile nav -->
-      <div
-        id="mobile-nav"
-        class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur"
-      >
-        <nav
-          class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3"
-        >
-          <a href="#home" class="py-1 hover:text-[var(--cor-principal)]"
-            >Home</a
-          >
-          <a href="#sobre" class="py-1 hover:text-[var(--cor-principal)]"
-            >Sobre Nós</a
-          >
-          <a href="#quem-somos" class="py-1 hover:text-[var(--cor-principal)]"
-            >Quem Somos</a
-          >
-          <a href="#projetos" class="py-1 hover:text-[var(--cor-principal)]"
-            >Projetos</a
-          >
-          <a href="#contatos" class="py-1 hover:text-[var(--cor-principal)]"
-            >Contatos</a
-          >
-          <a
-            href="#contatos"
-            class="mt-2 inline-flex w-max items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50"
-            >Solicitar proposta</a
-          >
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#home" class="hover:text-[var(--cor-principal)]">Home</a>
+          <a href="#sobre" class="hover:text-[var(--cor-principal)]">Sobre Nós</a>
+          <a href="#quem-somos" class="hover:text-[var(--cor-principal)]">Quem Somos</a>
+          <a href="#projetos" class="hover:text-[var(--cor-principal)]">Projetos</a>
+          <a href="#contatos" class="hover:text-[var(--cor-principal)]">Contatos</a>
+          <a href="#contatos"
+            class="inline-flex items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50 transition duration-300">Solicitar
+            proposta</a>
         </nav>
+
+        <!-- Mobile button -->
+        <button id="menu-btn"
+          class="md:hidden inline-flex items-center justify-center rounded-md border border-gray-200 p-2 hover:bg-gray-50"
+          aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-    </header>
+    </div>
 
-    <!-- HERO -->
-    <section id="home" class="relative overflow-hidden">
-      <!-- Blobs decorativos -->
-      <div
-        class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"
-      ></div>
-      <div
-        class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl"
-      ></div>
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3">
+        <a href="#home" class="py-1 hover:text-[var(--cor-principal)]">Home</a>
+        <a href="#sobre" class="py-1 hover:text-[var(--cor-principal)]">Sobre Nós</a>
+        <a href="#quem-somos" class="py-1 hover:text-[var(--cor-principal)]">Quem Somos</a>
+        <a href="#projetos" class="py-1 hover:text-[var(--cor-principal)]">Projetos</a>
+        <a href="#contatos" class="py-1 hover:text-[var(--cor-principal)]">Contatos</a>
+        <a href="#contatos"
+          class="mt-2 inline-flex w-max items-center rounded-full border border-[var(--cor-principal)] px-4 py-1.5 font-medium text-[var(--cor-secundaria)] hover:bg-red-50">Solicitar
+          proposta</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-        <div class="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <span
-              class="inline-flex items-center gap-2 rounded-full border border-red-200 px-3 py-1 text-xs font-medium text-[var(--cor-principal)]"
-            >
-              • Software sob medida
-            </span>
-            <h1
-              class="mt-5 font-display text-3xl md:text-5xl leading-tight text-gray-900"
-            >
-              Sistemas claros, robustos e feitos para escalar
-            </h1>
-            <p class="mt-5 max-w-xl text-gray-600">
-              Da ideia ao produto: arquitetura, desenvolvimento e evolução
-              contínua com foco em performance e experiência.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#contatos"
-                class="inline-flex items-center justify-center rounded-md bg-[var(--cor-principal)] px-5 py-3 text-white hover:bg-[var(--cor-secundaria)] transition duration-300"
-              >
-                Começar um projeto
-              </a>
-              <a
-                href="#projetos"
-                class="inline-flex items-center justify-center rounded-md border border-gray-300 px-5 py-3 text-gray-800 hover:bg-gray-50 transition"
-              >
-                Ver projetos
-              </a>
-            </div>
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <!-- Blobs decorativos -->
+    <div class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl">
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-red-200 px-3 py-1 text-xs font-medium text-[var(--cor-principal)]">
+            • Software sob medida
+          </span>
+          <h1 class="mt-5 font-display text-3xl md:text-5xl leading-tight text-gray-900">
+            Sistemas claros, robustos e feitos para escalar
+          </h1>
+          <p class="mt-5 max-w-xl text-gray-600">
+            Da ideia ao produto: arquitetura, desenvolvimento e evolução
+            contínua com foco em performance e experiência.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contatos"
+              class="inline-flex items-center justify-center rounded-md bg-[var(--cor-principal)] px-5 py-3 text-white hover:bg-[var(--cor-secundaria)] transition duration-300">
+              Começar um projeto
+            </a>
+            <a href="#projetos"
+              class="inline-flex items-center justify-center rounded-md border border-gray-300 px-5 py-3 text-gray-800 hover:bg-gray-50 transition">
+              Ver projetos
+            </a>
           </div>
+        </div>
 
-          <!-- Card visual à direita -->
-          <div class="relative">
-            <div class="dot-grid rounded-2xl border border-gray-200 p-6">
-              <div
-                class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
-              >
-                <div class="flex items-center justify-between">
-                  <div
-                    class="h-3 w-3 rounded-full bg-[var(--cor-principal)]"
-                  ></div>
-                  <div class="text-sm text-gray-500">status: online</div>
-                </div>
-                <div class="mt-6 space-y-3">
-                  <div class="h-3 w-3/5 rounded bg-gray-200"></div>
-                  <div class="h-3 w-4/5 rounded bg-gray-200"></div>
-                  <div class="h-3 w-2/5 rounded bg-gray-200"></div>
-                  <div class="h-3 w-3/4 rounded bg-gray-200"></div>
-                </div>
+        <!-- Card visual à direita -->
+        <div class="relative">
+          <div class="dot-grid rounded-2xl border border-gray-200 p-6">
+            <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div class="flex items-center justify-between">
+                <div class="h-3 w-3 rounded-full bg-[var(--cor-principal)]"></div>
+                <div class="text-sm text-gray-500">status: online</div>
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="h-3 w-3/5 rounded bg-gray-200"></div>
+                <div class="h-3 w-4/5 rounded bg-gray-200"></div>
+                <div class="h-3 w-2/5 rounded bg-gray-200"></div>
+                <div class="h-3 w-3/4 rounded bg-gray-200"></div>
               </div>
             </div>
-            <span
-              class="absolute -right-4 -bottom-4 inline-block rounded-full bg-white px-3 py-1 text-xs font-medium text-[var(--cor-principal)] ring-1 ring-red-200"
-              >Supply Engines v2</span
-            >
           </div>
+          <span
+            class="absolute -right-4 -bottom-4 inline-block rounded-full bg-white px-3 py-1 text-xs font-medium text-[var(--cor-principal)] ring-1 ring-red-200">Supply
+            Engines v2</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SOBRE NÓS -->
-    <section id="sobre" class="scroll-mt-24 border-t border-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="max-w-3xl">
-          <h2 class="font-display text-3xl text-gray-900">Sobre nós</h2>
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="scroll-mt-24 border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-3xl">
+        <h2 class="font-display text-3xl text-gray-900">Sobre nós</h2>
+        <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
+        <p class="mt-6 text-gray-600">
+          A Supply Sistemas cria soluções digitais sob medida, combinando
+          engenharia de software, UX e boas práticas de produto. Trabalhamos
+          próximos ao seu negócio para entregar valor real, com qualidade e
+          previsibilidade.
+        </p>
+        <ul class="mt-6 space-y-2 text-gray-700">
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Arquitetura escalável e
+              segura.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Time focado em resultado, não
+              apenas em entregas.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"></span><span>Transparência total no
+              processo e nos prazos.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS / NOSSA EQUIPE -->
+  <section id="quem-somos" class="scroll-mt-24 border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h2 class="font-display text-3xl text-gray-900">Nossa Equipe</h2>
+          <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
+          <p class="mt-6 max-w-2xl text-gray-600">
+            Gente que une visão de produto, engenharia e cuidado com a
+            experiência.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-2">
+        <!-- Pessoa 1 -->
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md">
+          <div class="flex items-center gap-4">
+            <img src="SRC/minha_photo.png" alt="Membro 1"
+              class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover" />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                Gabriel Trajano
+              </h3>
+              <p class="text-sm text-gray-600">
+                CEO • Desenvolvimento & Design
+              </p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600">
+            Focado em escalabilidade, qualidade de código e observabilidade.
+          </p>
+        </article>
+
+        <!-- Pessoa 2 -->
+        <article
+          class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md">
+          <div class="flex items-center gap-4">
+            <img src="https://placehold.co/400x400/f03612/FFFFFF?text=Foto" alt="Membro 2"
+              class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover" />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                Rodrigo Ferreira
+              </h3>
+              <p class="text-sm text-gray-600">
+                Diretor Executivo • Desenvolvimento & Dados
+              </p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600">
+            Entrega ciclos curtos, validação e alinhamento com as metas do
+            negócio.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSOS PROJETOS -->
+  <section id="projetos" class="scroll-mt-24 border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex items-end justify-between">
+        <div>
+          <h2 class="font-display text-3xl text-gray-900">Nossos Projetos</h2>
+          <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
+        </div>
+        <a href="#contatos"
+          class="hidden sm:inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50">
+          Falar sobre um projeto
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card Projeto -->
+        <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
+          <div class="relative">
+            <img src="SRC/menu_project.png" alt="Projeto 1"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <span
+              class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Digital</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Cardápios Digitais
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Criação de cardápios estilizados para o seu estabelecimento
+              garantindo credibilidade e confiança para a sua empresa.
+            </p>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
+          <div class="relative">
+            <img src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto" alt="Projeto 2"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <span
+              class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Mobile</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">
+              App de Operações
+            </h3>
+            <p class="mt-2 text-gray-600">
+              Checklists offline, notificações e dashboards de campo.
+            </p>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white">
+          <div class="relative">
+            <img src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto" alt="Projeto 3"
+              class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+            <span
+              class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200">Data</span>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Plataforma de Insights
+            </h3>
+            <p class="mt-2 text-gray-600">
+              ETL, camadas analíticas e visualização em tempo real.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATOS -->
+  <section id="contatos" class="scroll-mt-24 border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 class="font-display text-3xl text-gray-900">
+            Entre em contato
+          </h2>
           <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
           <p class="mt-6 text-gray-600">
-            A Supply Sistemas cria soluções digitais sob medida, combinando
-            engenharia de software, UX e boas práticas de produto. Trabalhamos
-            próximos ao seu negócio para entregar valor real, com qualidade e
-            previsibilidade.
+            Conte um pouco do seu desafio. Respondemos em até 1 dia útil.
           </p>
-          <ul class="mt-6 space-y-2 text-gray-700">
-            <li class="flex gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"
-              ></span
-              ><span>Arquitetura escalável e segura.</span>
+
+          <div class="mt-6 space-y-3 text-gray-700">
+            <p>
+              <span class="font-medium text-gray-900">E-mail:</span>
+              contatosupplysistemas@gmail.com
+            </p>
+            <p>
+              <span class="font-medium text-gray-900">Telefone:</span> (21)
+              98244-6702
+            </p>
+            <p>
+              <span class="font-medium text-gray-900">Endereço:</span> Rio de
+              Janeiro - RJ
+            </p>
+          </div>
+        </div>
+
+        <form class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm space-y-4">
+          <div>
+            <label class="mb-1 block text-sm font-medium text-gray-700">Nome</label>
+            <input type="text"
+              class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
+              placeholder="Seu nome" required />
+          </div>
+          <div>
+            <label class="mb-1 block text-sm font-medium text-gray-700">E-mail</label>
+            <input type="email"
+              class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
+              placeholder="voce@exemplo.com" required />
+          </div>
+          <div>
+            <label class="mb-1 block text-sm font-medium text-gray-700">Mensagem</label>
+            <textarea rows="5"
+              class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
+              placeholder="Como podemos ajudar?" required></textarea>
+          </div>
+          <button type="submit"
+            class="w-full rounded-md bg-[var(--cor-principal)] py-3 font-medium text-white hover:bg-orange-600 transition">
+            Enviar
+          </button>
+          <p class="text-xs text-gray-500">
+            Ao enviar, você concorda com nossa política de privacidade.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--cor-principal)]">
+              <img src="SRC/Supply.png" alt="Logo Supply" class="rounded-full" />
+            </span>
+            <span class="text-base font-semibold text-gray-900">Supply Sistemas</span>
+          </div>
+          <p class="mt-4 text-sm text-gray-600">
+            Software claro, confiável e escalável. Parceria de longo prazo com
+            foco em resultado.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900">Navegação</h4>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#home">Home</a>
             </li>
-            <li class="flex gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"
-              ></span
-              ><span>Time focado em resultado, não apenas em entregas.</span>
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#sobre">Sobre Nós</a>
             </li>
-            <li class="flex gap-3">
-              <span
-                class="mt-1 h-2 w-2 rounded-full bg-[var(--cor-principal)]"
-              ></span
-              ><span>Transparência total no processo e nos prazos.</span>
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#quem-somos">Quem Somos</a>
+            </li>
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#projetos">Projetos</a>
+            </li>
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#contatos">Contatos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900">Legal</h4>
+          <ul class="mt-4 space-y-2 text-sm">
+            <!-- Link externo para termos (não aparece no corpo da página) -->
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="termos.html" target="_blank" rel="noopener">Termos e
+                Condições</a>
+            </li>
+            <li>
+              <a class="hover:text-[var(--cor-principal)]" href="#" onclick="alert('Em breve'); return false;">Política
+                de Privacidade</a>
             </li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- QUEM SOMOS / NOSSA EQUIPE -->
-    <section id="quem-somos" class="scroll-mt-24 border-t border-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="font-display text-3xl text-gray-900">Nossa Equipe</h2>
-            <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
-            <p class="mt-6 max-w-2xl text-gray-600">
-              Gente que une visão de produto, engenharia e cuidado com a
-              experiência.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-10 grid gap-8 sm:grid-cols-2">
-          <!-- Pessoa 1 -->
-          <article
-            class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
-          >
-            <div class="flex items-center gap-4">
-              <img
-                src="SRC/minha_photo.png"
-                alt="Membro 1"
-                class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover"
-              />
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Gabriel Trajano
-                </h3>
-                <p class="text-sm text-gray-600">
-                  CEO • Desenvolvimento & Design
-                </p>
-              </div>
-            </div>
-            <p class="mt-4 text-gray-600">
-              Focado em escalabilidade, qualidade de código e observabilidade.
-            </p>
-          </article>
-
-          <!-- Pessoa 2 -->
-          <article
-            class="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
-          >
-            <div class="flex items-center gap-4">
-              <img
-                src="https://placehold.co/400x400/f03612/FFFFFF?text=Foto"
-                alt="Membro 2"
-                class="h-16 w-16 rounded-full ring-2 ring-red-200 object-cover"
-              />
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Rodrigo Ferreira
-                </h3>
-                <p class="text-sm text-gray-600">
-                  Diretor Executivo • Desenvolvimento & Dados
-                </p>
-              </div>
-            </div>
-            <p class="mt-4 text-gray-600">
-              Entrega ciclos curtos, validação e alinhamento com as metas do
-              negócio.
-            </p>
-          </article>
+      <div
+        class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-6 text-sm text-gray-500 md:flex-row">
+        <p>© 2025 Supply Sistemas. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-[var(--cor-principal)]">Facebook</a>
+          <a href="#" class="hover:text-[var(--cor-principal)]">Instagram</a>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- NOSSOS PROJETOS -->
-    <section id="projetos" class="scroll-mt-24 border-t border-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="flex items-end justify-between">
-          <div>
-            <h2 class="font-display text-3xl text-gray-900">Nossos Projetos</h2>
-            <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
-          </div>
-          <a
-            href="#contatos"
-            class="hidden sm:inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50"
-          >
-            Falar sobre um projeto
-          </a>
-        </div>
+  <!-- Scripts: header sticky e menu mobile -->
+  <script>
+    const header = document.getElementById("site-header");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileNav = document.getElementById("mobile-nav");
 
-        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Card Projeto -->
-          <article
-            class="group overflow-hidden rounded-2xl border border-gray-200 bg-white"
-          >
-            <div class="relative">
-              <img
-                src="SRC/menu_project.png"
-                alt="Projeto 1"
-                class="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200"
-                >Digital</span
-              >
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-semibold text-gray-900">
-                Cardápios Digitais
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Criação de cardápios estilizados para o seu estabelecimento
-                garantindo credibilidade e confiança para a sua empresa.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="group overflow-hidden rounded-2xl border border-gray-200 bg-white"
-          >
-            <div class="relative">
-              <img
-                src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto"
-                alt="Projeto 2"
-                class="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200"
-                >Mobile</span
-              >
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-semibold text-gray-900">
-                App de Operações
-              </h3>
-              <p class="mt-2 text-gray-600">
-                Checklists offline, notificações e dashboards de campo.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="group overflow-hidden rounded-2xl border border-gray-200 bg-white"
-          >
-            <div class="relative">
-              <img
-                src="https://placehold.co/600x400/f03612/FFFFFF?text=Projeto"
-                alt="Projeto 3"
-                class="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-orange-700 ring-1 ring-orange-200"
-                >Data</span
-              >
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-semibold text-gray-900">
-                Plataforma de Insights
-              </h3>
-              <p class="mt-2 text-gray-600">
-                ETL, camadas analíticas e visualização em tempo real.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATOS -->
-    <section id="contatos" class="scroll-mt-24 border-t border-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-        <div class="grid gap-10 md:grid-cols-2">
-          <div>
-            <h2 class="font-display text-3xl text-gray-900">
-              Entre em contato
-            </h2>
-            <div class="mt-3 h-1 w-16 bg-[var(--cor-principal)]"></div>
-            <p class="mt-6 text-gray-600">
-              Conte um pouco do seu desafio. Respondemos em até 1 dia útil.
-            </p>
-
-            <div class="mt-6 space-y-3 text-gray-700">
-              <p>
-                <span class="font-medium text-gray-900">E-mail:</span>
-                contatosupplysistemas@gmail.com
-              </p>
-              <p>
-                <span class="font-medium text-gray-900">Telefone:</span> (21)
-                98244-6702
-              </p>
-              <p>
-                <span class="font-medium text-gray-900">Endereço:</span> Rio de
-                Janeiro - RJ
-              </p>
-            </div>
-          </div>
-
-          <form
-            class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm space-y-4"
-          >
-            <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700"
-                >Nome</label
-              >
-              <input
-                type="text"
-                class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
-                placeholder="Seu nome"
-                required
-              />
-            </div>
-            <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700"
-                >E-mail</label
-              >
-              <input
-                type="email"
-                class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
-                placeholder="voce@exemplo.com"
-                required
-              />
-            </div>
-            <div>
-              <label class="mb-1 block text-sm font-medium text-gray-700"
-                >Mensagem</label
-              >
-              <textarea
-                rows="5"
-                class="w-full border-[2px] rounded-md border-gray-300 focus:border-[var(--cor-principal)] focus:outline-none p-2"
-                placeholder="Como podemos ajudar?"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full rounded-md bg-[var(--cor-principal)] py-3 font-medium text-white hover:bg-orange-600 transition"
-            >
-              Enviar
-            </button>
-            <p class="text-xs text-gray-500">
-              Ao enviar, você concorda com nossa política de privacidade.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid gap-8 md:grid-cols-3">
-          <div>
-            <div class="flex items-center gap-2">
-              <span
-                class="inline-block h-7 w-7 rounded-full ring-2 ring-[var(--cor-principal)]"
-              >
-                <img
-                  src="SRC/Supply.png"
-                  alt="Logo Supply"
-                  class="rounded-full"
-                />
-              </span>
-              <span class="text-base font-semibold text-gray-900"
-                >Supply Sistemas</span
-              >
-            </div>
-            <p class="mt-4 text-sm text-gray-600">
-              Software claro, confiável e escalável. Parceria de longo prazo com
-              foco em resultado.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">Navegação</h4>
-            <ul class="mt-4 space-y-2 text-sm">
-              <li>
-                <a class="hover:text-[var(--cor-principal)]" href="#home"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a class="hover:text-[var(--cor-principal)]" href="#sobre"
-                  >Sobre Nós</a
-                >
-              </li>
-              <li>
-                <a class="hover:text-[var(--cor-principal)]" href="#quem-somos"
-                  >Quem Somos</a
-                >
-              </li>
-              <li>
-                <a class="hover:text-[var(--cor-principal)]" href="#projetos"
-                  >Projetos</a
-                >
-              </li>
-              <li>
-                <a class="hover:text-[var(--cor-principal)]" href="#contatos"
-                  >Contatos</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900">Legal</h4>
-            <ul class="mt-4 space-y-2 text-sm">
-              <!-- Link externo para termos (não aparece no corpo da página) -->
-              <li>
-                <a
-                  class="hover:text-[var(--cor-principal)]"
-                  href="termos.html"
-                  target="_blank"
-                  rel="noopener"
-                  >Termos e Condições</a
-                >
-              </li>
-              <li>
-                <a
-                  class="hover:text-[var(--cor-principal)]"
-                  href="#"
-                  onclick="alert('Em breve'); return false;"
-                  >Política de Privacidade</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-6 text-sm text-gray-500 md:flex-row"
-        >
-          <p>© 2025 Supply Sistemas. Todos os direitos reservados.</p>
-          <div class="flex items-center gap-4">
-            <a href="#" class="hover:text-[var(--cor-principal)]">Facebook</a>
-            <a href="#" class="hover:text-[var(--cor-principal)]">Instagram</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts: header sticky e menu mobile -->
-    <script>
-      const header = document.getElementById("site-header");
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileNav = document.getElementById("mobile-nav");
-
-      const setHeader = () => {
-        const scrolled = window.scrollY > 8;
-        header.className = `fixed inset-x-0 top-0 z-50 transition-all ${
-          scrolled
-            ? "bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm"
-            : ""
+    const setHeader = () => {
+      const scrolled = window.scrollY > 8;
+      header.className = `fixed inset-x-0 top-0 z-50 transition-all ${scrolled
+        ? "bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm"
+        : ""
         }`;
-      };
-      setHeader();
-      window.addEventListener("scroll", setHeader);
+    };
+    setHeader();
+    window.addEventListener("scroll", setHeader);
 
-      menuBtn.addEventListener("click", () => {
-        mobileNav.classList.toggle("hidden");
-      });
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("hidden");
+    });
 
-      // Fecha o menu ao clicar em um link
-      mobileNav.querySelectorAll("a").forEach((a) => {
-        a.addEventListener("click", () => mobileNav.classList.add("hidden"));
-      });
-    </script>
-  </body>
+    // Fecha o menu ao clicar em um link
+    mobileNav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => mobileNav.classList.add("hidden"));
+    });
+  </script>
+</body>
+
 </html>
