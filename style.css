@@ -29,19 +29,3 @@
              transparent 0);
      background-size: 22px 22px;
  }
-
- #whatsapp-icon {
-     position: absolute;
-     bottom: 25px;
-     right: 25px;
-     position: fixed;
-     height: 50px;
-     transition: all ease 500ms;
-     z-index: 10;
- }
-
- #whatsapp-icon:hover {
-     transform: scale(1.10);
-     opacity: 0.9;
-     cursor: pointer;
- }
